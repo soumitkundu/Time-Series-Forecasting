@@ -1,0 +1,10 @@
+{
+  "lstm_rmse_train": 2.382585693576097,
+  "lstm_rmse_test": 11.937066661825119,
+  "lstm_mae_train": 1.6660076008970757,
+  "lstm_mae_test": 10.187571926393371,
+  "xgb_rmse_train": 1.4055298702796228,
+  "xgb_rmse_test": 33.05741442097846,
+  "xgb_mae_train": 0.8152231909419518,
+  "xgb_mae_test": 24.28113086407001
+}

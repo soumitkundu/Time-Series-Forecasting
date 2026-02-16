@@ -1,0 +1,13 @@
+# Time-Series Forecasting API - run with: docker compose up --build
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount trained models and cleaned data (run: python -m src.pipeline first)
+      - ./models:/app/models:ro
+      - ./data:/app/data:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
