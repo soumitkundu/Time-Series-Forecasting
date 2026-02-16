@@ -9,6 +9,7 @@ import joblib
 import numpy as np
 import pandas as pd
 from fastapi import FastAPI, HTTPException, Response
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from tensorflow import keras
 
@@ -21,6 +22,15 @@ XGB_MODEL_PATH = PROJECT_ROOT / "models" / "model_xgb.joblib"
 TIME_STEP = 100
 
 app = FastAPI(title="Time-Series Forecasting API")
+
+# Configure CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000", "http://localhost:3001"],  # React dev server
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Lazy-loaded models
 _lstm_model = None
