@@ -1,0 +1,28 @@
+# Virtual env and Python cache
+.venv
+venv
+__pycache__
+*.py[cod]
+*.pyo
+.Python
+*.so
+
+# Git and IDE
+.git
+.gitignore
+.cursor
+.vscode
+.idea
+*.md
+!README.md
+
+# Notebooks and dev artifacts
+*.ipynb
+.pytest_cache
+.mypy_cache
+.coverage
+htmlcov
+
+# Data and models: mount at runtime or copy in after pipeline run
+data/
+models/
