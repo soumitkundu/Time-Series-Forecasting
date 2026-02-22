@@ -26,3 +26,6 @@ htmlcov
 # Data and models: mount at runtime or copy in after pipeline run
 data/
 models/
+
+# node_modules for frontend
+frontend/node_modules/
