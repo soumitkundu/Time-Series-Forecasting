@@ -69,6 +69,11 @@ class PredictResponse(BaseModel):
     next_day_close: float
 
 
+@app.get("/")
+def home():
+    """Home: service is running."""
+    return {"status": "ok", "message": "Time-Series Forecasting API"}
+
 @app.get("/health")
 def health():
     """Liveness: service is running."""
